@@ -15,7 +15,7 @@ pipeline {
 
                       }
                    }
-         }
+         }/*
           stage('MVN compile') {
             steps {
 
@@ -37,7 +37,7 @@ pipeline {
 
                       }
                    }
-         }
+         }*/
 
           stage('Artifact Construction') {
                       steps{
