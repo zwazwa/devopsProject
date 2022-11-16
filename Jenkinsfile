@@ -44,6 +44,7 @@ pipeline {
                           sh "mvn -B -DskipTests  package "
                       }
                   }
+        /*
                   stage('sonar') {
                               steps{
                                   sh "mvn sonar:sonar -Dsonar.projectKey=sonarqube -Dsonar.host.url=http://192.168.43.40:9000/ -Dsonar.login=25def65e24753ed9017b58df0dada2a2cf967047"
@@ -91,7 +92,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                       sh 'docker-compose up -d'
                                     }
                                 }
-                            }
+                            } */
      }
 
      }
