@@ -53,7 +53,7 @@ pipeline {
 
 
 
-/*
+
          stage('nexus') {
             steps {
 
@@ -92,7 +92,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                       sh 'docker-compose up -d'
                                     }
                                 }
-                            } */
+                            } 
      }
 
      }
