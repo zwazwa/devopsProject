@@ -2,7 +2,7 @@ version: "3"
 services:
   back-end:
     container_name: back
-    image: zwazwa/back
+    image: zwazwa/backcicd
     restart: always
     ports:
       - 8089:8089
