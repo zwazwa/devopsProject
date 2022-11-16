@@ -65,7 +65,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
         stage('Build Docker Image'){
                       steps {
                           script{
-          				    sh 'docker image build  -t salem13/backcicd .  '
+          				    sh 'docker image build  -t zwazwa/backcicd .  '
                           }
                       }
           		}
@@ -73,7 +73,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                        sh 'docker login -u salem13 -p azerty123.'}
+                                        sh 'docker login -u zwazwa -p zwazwa123'}
                                 }
                                 }
 
@@ -81,7 +81,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                     sh 'docker push salem13/backcicd'
+                                     sh 'docker push zwazwa/backcicd'
                                     }
                           }
                           }
