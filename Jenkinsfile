@@ -64,7 +64,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
         stage('Build Docker Image'){
                       steps {
                           script{
-          				    sh 'docker image build  -t yass1ne/backcicd .  '
+          				    sh 'docker image build  -t haifa123456/backcicd .  '
                           }
                       }
           		}
@@ -81,7 +81,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                     sh 'docker push yass1ne/backcicd'
+                                     sh 'docker push haifa123456/backcicd'
                                     }
                           }
                           }
