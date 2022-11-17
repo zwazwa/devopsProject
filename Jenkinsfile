@@ -72,7 +72,8 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                        sh 'docker login -u yass1ne -p Y@$$1ne@1997 '}
+                                     sh 'docker login -u haifa123456 -p haifabrineg'}
+                     
                                 }
                                 }
 
