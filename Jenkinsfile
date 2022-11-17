@@ -46,7 +46,7 @@ pipeline {
                   }
                   stage('sonar') {
                               steps{
-                                  sh "mvn sonar:sonar -Dsonar.projectKey=sonarqube -Dsonar.host.url=http://192.168.43.40:9000/ -Dsonar.login=25def65e24753ed9017b58df0dada2a2cf967047"
+                                  sh "mvn sonar:sonar -Dsonar.projectKey=sonarqube -Dsonar.host.url=http://192.168.43.40:9000/ -Dsonar.login=ecb992930386104c558ea90932766d50418571f7"
                               }
                           }
 
@@ -64,7 +64,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
         stage('Build Docker Image'){
                       steps {
                           script{
-          				    sh 'docker image build  -t salem13/backcicd .  '
+          				    sh 'docker image build  -t yass1ne/backcicd .  '
                           }
                       }
           		}
@@ -72,7 +72,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                        sh 'docker login -u salem13 -p azerty123.'}
+                                        sh 'docker login -u yass1ne -p Y@$$1ne@1997'}
                                 }
                                 }
 
@@ -80,7 +80,7 @@ sh 'mvn -DskipTests deploy  -e'                      }
                                 steps {
                                     script {
 
-                                     sh 'docker push salem13/backcicd'
+                                     sh 'docker push yass1ne/backcicd'
                                     }
                           }
                           }
