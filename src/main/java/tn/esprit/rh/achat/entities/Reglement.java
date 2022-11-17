@@ -14,8 +14,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import tn.esprit.rh.achat.dto.DtoReglement;
-
 
 @Entity
 @Getter
@@ -36,13 +34,5 @@ public class Reglement implements Serializable{
 	@ManyToOne
 	@JsonIgnore
 	private Facture facture;
-	public Reglement(DtoReglement r) {
-		this.montantPaye=r.getMontantPaye();
-		this.montantRestant=r.getMontantRestant();
-		this.payee=r.getPayee();
-		this.dateReglement=r.getDateReglement();
-		
-			
-	}
 	
 }

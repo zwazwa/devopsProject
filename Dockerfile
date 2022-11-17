@@ -1,10 +1,21 @@
-FROM openjdk:slim
+# Docker Build Stage
+FROM maven:3-jdk-8-alpine 
 
 
-WORKDIR /app
+# Build Stage
+WORKDIR /opt/app
 
-COPY /target/achat-1.0.jar /app/achat-1.0.jar
+COPY ./ /opt/app
+RUN mvn clean install -DskipTests
 
-COPY src/main/resources/application.properties /app
 
-ENTRYPOINT ["java","-jar","achat-1.0.jar", "-Dspring.config.location=", "/app/application.properties"]
+# Docker Build Stage
+FROM openjdk:8-jdk-alpine
+
+COPY --from=build /opt/app/target/*.jar app.jar
+
+ENV PORT 8081
+EXPOSE $PORT
+
+ENTRYPOINT ["java","-jar","-Xmx1024M","-Dserver.port=${PORT}","app.jar"]
+
